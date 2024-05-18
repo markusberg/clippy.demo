@@ -1,0 +1,72 @@
+html {
+  background: url(./windows-xp-bliss-4k-lu-1920x1080.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+html, body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Styling specific to a sheet of lined paper */
+.container {
+  width: 50rem;
+  height: calc(100vh - 6rem);
+  filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.3));
+  margin: 2rem auto;
+  overflow: hidden;
+
+  /* vertical pink margin line */
+  background: #f2f6a7;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P4f+D0fwAI1gOKM8+P6gAAAABJRU5ErkJggg==);
+  background-size: 2px 1px;
+  background-position: 5rem 0;
+  background-repeat: repeat-y;
+}
+
+.sheet {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  
+  background-image: url(./crumpled4.png);
+  background-repeat: repeat;
+  background-attachment: local;
+}
+
+.sheet .header, .sheet .body {
+  padding-left: 6rem;
+  padding-right: 3rem;
+}
+
+.sheet .header {
+  border-bottom: 2px solid #9198e5;
+}
+.sheet .header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.sheet .body {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent calc(1.5rem - 1.4px),
+    #9198e5 calc(1.5rem - 1px),
+    #9198e5 1.5rem
+  );
+  line-height: 1.5rem;
+
+}
+
+.sheet p {
+  padding-top: 0.1rem;
+  margin-top: 0px;
+  margin-bottom: 1.4rem;
+}
+
+button {
+  height: 2.6rem;
+  margin-bottom: 0.4rem;
+}

@@ -1,0 +1,24 @@
+{
+	"name": "clippy.demo",
+	"version": "1.0.0",
+	"description": "Demo of clippy.modern.",
+	"type": "module",
+	"workspaces": ["clippy.ng"],
+	"scripts": {
+		"build": "npm run build --workspaces",
+		"demo": "http-server -a localhost -p 1234 -o /clippy.js",
+		"prep": "npm install && lefthook install",
+		"start": "npm run build && npm run demo",
+		"test": "npm test --workspaces"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/markusberg/clippy.demo.git"
+	},
+	"keywords": ["clippy.modern", "clippy.js", "clippy"],
+	"dependencies": {
+		"@biomejs/biome": "^1.7.3",
+		"http-server": "^14.1.1",
+		"lefthook": "^1.6.12"
+	}
+}

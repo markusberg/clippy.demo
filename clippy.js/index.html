@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Clippy.modern demo</title>
+  <link rel="stylesheet" href="./demo.css" />
+  <link rel="stylesheet" href="/dist/clippy.css" />
+</head>
+
+<body>
+  <script src="./demo.js" type="module"></script>
+
+  <div class="desktop">
+    <div class="window">
+      <div class="win2k-winborder">
+        <div class="win2k-outset win2k-window">
+          <div class="titlebar">
+            <div class="wintitle">
+              <img src="word2k-titlebar.png" />
+            </div>
+            <div class="wincontrols">
+              <img src="word2k-wincontrols.png" />
+            </div>
+          </div>
+          <div class="win2k-outset menubar">
+            <div><img src="word2k-menubar.png" /></div>
+            <div><img src="win2k-btn-x.png" /></div>
+          </div>
+          <div class="win2k-outset toolbar">
+            <img src="word2k-toolbar-edit.png" />
+          </div>
+          <div class="win2k-outset toolbar">
+            <img src="word2k-toolbar-font.png" />
+          </div>
+
+          <div class="win2k-inset">
+            <div class="word2k-doc-container">
+              <div class="word2k-docarea">
+                <div class="word2k-document">
+                  <div class="content">
+                    <h1>clippy.modern</h1>
+                    <p>
+                      This is the modernized version of clippy set in the
+                      familiar environment of Windows 2000.
+                    </p>
+                    <button id="start-button">Click to start</button>
+
+                    <div id="demo-area">
+                      <h3>Available agents:</h3>
+                      <div id="agents"></div>
+
+                      <h3>Actions:</h3>
+                      <button id="agent-speak">Speak</button>
+
+                      <h3>Available animations:</h3>
+                      <div id="animations"></div>
+                    </div>
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed vitae tortor eleifend, cursus augue in, luctus tellus.
+                      Aenean consectetur, nisi vitae pulvinar ornare, odio orci
+                      varius turpis, vitae lacinia libero lectus nec arcu. Duis
+                      mollis felis sem, quis rutrum lectus ultricies vel. Etiam
+                      posuere velit vel nibh porttitor, id suscipit sapien
+                      ultricies. Vestibulum eleifend et massa nec dapibus.
+                      Maecenas molestie cursus felis ut ornare. Mauris vel
+                      scelerisque justo. Sed condimentum ex vel auctor auctor.
+                      Nulla non pharetra nisl. Aliquam elit lorem, congue vitae
+                      efficitur at, rhoncus eget nunc. Sed auctor tristique eros
+                      ut egestas. Sed venenatis euismod magna, id bibendum sem
+                      mollis eget. Integer sollicitudin, ligula vel lacinia
+                      venenatis, dui magna sollicitudin erat, posuere molestie
+                      est est ac mauris. Mauris vestibulum orci viverra eros
+                      consequat dictum.
+                    </p>
+                    <p>
+                      Duis sodales, neque vel molestie tempus, dolor dui
+                      fringilla metus, quis convallis ipsum lectus ac neque.
+                      Cras blandit quam id enim imperdiet, vel commodo ipsum
+                      semper. Quisque ultrices mollis fringilla. Fusce tristique
+                      ipsum eu justo porta pharetra. Cras rhoncus euismod
+                      fringilla. Phasellus pharetra, eros id congue lacinia,
+                      nibh purus elementum ligula, sodales pulvinar nisi urna id
+                      diam. Vivamus faucibus vel lorem non sodales. Nam erat
+                      urna, tempor nec maximus vitae, consequat a dolor.
+                      Vestibulum tincidunt in orci nec aliquam. Vestibulum id
+                      bibendum neque, nec maximus metus. Aliquam vitae molestie
+                      turpis. Nullam elementum euismod mollis. Interdum et
+                      malesuada fames ac ante ipsum primis in faucibus. Sed at
+                      turpis turpis. Donec finibus purus diam, id sollicitudin
+                      quam tempus at.
+                    </p>
+                    <p>
+                      Pellentesque vitae maximus magna, ac ullamcorper magna.
+                      Mauris consequat facilisis neque, eget scelerisque odio
+                      consectetur a. Suspendisse enim nibh, tempor sit amet
+                      neque a, vulputate cursus diam. Duis in arcu at justo
+                      ullamcorper commodo vel in quam. Vivamus et nisi urna.
+                      Quisque interdum felis id erat convallis, ac maximus erat
+                      ultricies. Sed convallis ipsum at lectus molestie, non
+                      mattis velit vulputate. Aliquam in massa vitae lectus
+                      placerat molestie ac vitae risus.
+                    </p>
+                    <p>
+                      Sed nec elit eget diam facilisis porta vitae in justo.
+                      Morbi accumsan volutpat enim eu aliquet. Nunc condimentum
+                      luctus arcu at ultricies. Aliquam vitae bibendum urna.
+                      Aliquam nulla mi, tristique eget laoreet a, semper eget
+                      libero. Maecenas non orci sem. Proin pretium tortor vel
+                      nunc fringilla, id malesuada magna pulvinar. Suspendisse
+                      lobortis pellentesque ante non consectetur. Nunc finibus
+                      ligula sit amet tortor mollis placerat. Maecenas mi
+                      libero, pellentesque sed massa sit amet, congue tempus
+                      nunc. Nunc interdum ante non mauris posuere, in blandit
+                      velit dignissim. Morbi sagittis nunc at arcu finibus, sit
+                      amet tempor dolor bibendum.
+                    </p>
+                    <p>
+                      Proin efficitur in velit vitae sagittis. Interdum et
+                      malesuada fames ac ante ipsum primis in faucibus. Cras
+                      vitae dignissim lorem. Suspendisse et mauris et tortor
+                      pretium ultrices. Quisque a posuere nulla. Sed ligula
+                      risus, tincidunt sed dapibus et, lobortis id quam.
+                      Vestibulum pellentesque lacus et fringilla euismod. Nulla
+                      mi mauris, varius semper sagittis quis, ornare ac leo.
+                      Etiam tempor auctor enim pharetra condimentum. Aliquam
+                      ullamcorper eros sed viverra pulvinar. Vestibulum at ipsum
+                      vitae nibh tincidunt congue. Vivamus eget urna iaculis,
+                      venenatis sapien vel, tempus odio. Ut mollis augue sit
+                      amet dignissim feugiat. Interdum et malesuada fames ac
+                      ante ipsum primis in faucibus.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="word2k-scrollbar-horizontal"><img src="word2k-scrollbar-horizontal.png"></div>
+            </div>
+          </div>
+
+          <div class="word2k-footer">
+            <div class="metadata"><img src="word2k-footer.png" /></div>
+            <div><img src="win2k-resize-handle.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="taskbar">
+    <div class="start"><img src="win2k-taskbar-start.png" /></div>
+    <div class="tray"><img src="win2k-taskbar-tray.png" /></div>
+  </div>
+</body>
+
+</html>

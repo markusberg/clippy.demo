@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Clippy.js demo</title>
+
+    <link rel="stylesheet" type="text/css" href="./clippy.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./demo.css" media="all" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sheet">
+        <div class="header">
+          <h1>Original Clippy.js demo</h1>
+        </div>
+        <div class="body">
+          <p>
+            This is the original clippy.js. Published here for troubleshooting
+            purposes to enable comparisons between original and modern. The code
+            is unchanged, with the exception of the hard-coded link to the
+            agents.
+          </p>
+          <p>
+            <button type="button" onclick="firstLoad()" id="btn-start">
+              Click here to start
+            </button>
+            <span id="btn-actions" style="display: none">
+              <button type="button" onclick="randomAnimation()">
+                Click for random animation
+              </button>
+
+              <button type="button" onclick="speak()">Click to speak</button>
+
+              <button type="button" onclick="getNewAgent()">
+                Replace agent
+              </button>
+            </span>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+            tortor eleifend, cursus augue in, luctus tellus. Aenean consectetur,
+            nisi vitae pulvinar ornare, odio orci varius turpis, vitae lacinia
+            libero lectus nec arcu. Duis mollis felis sem, quis rutrum lectus
+            ultricies vel. Etiam posuere velit vel nibh porttitor, id suscipit
+            sapien ultricies. Vestibulum eleifend et massa nec dapibus. Maecenas
+            molestie cursus felis ut ornare. Mauris vel scelerisque justo. Sed
+            condimentum ex vel auctor auctor. Nulla non pharetra nisl. Aliquam
+            elit lorem, congue vitae efficitur at, rhoncus eget nunc. Sed auctor
+            tristique eros ut egestas. Sed venenatis euismod magna, id bibendum
+            sem mollis eget. Integer sollicitudin, ligula vel lacinia venenatis,
+            dui magna sollicitudin erat, posuere molestie est est ac mauris.
+            Mauris vestibulum orci viverra eros consequat dictum.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+
+    <!-- Clippy.js -->
+    <script src="./clippy.min.js"></script>
+
+    <!-- Init script -->
+    <script type="text/javascript">
+      availableAgents = [
+        "Bonzi",
+        "Clippy",
+        "F1",
+        "Genie",
+        "Genius",
+        "Links",
+        "Merlin",
+        "Peedy",
+        "Rocky",
+        "Rover",
+      ];
+      talks = [
+        "Hello, this is a demo of clippy.js",
+        "How can i help you?",
+        "At your service",
+        "It looks like you're attempting to train a Large Language Model. Would you like some help with that?",
+        "It looks like you're trying to write an e-mail. Do you want some help with that?",
+      ];
+
+      function firstLoad() {
+        loadAgent();
+        toggleButtonVisibility();
+      }
+
+      function loadAgent() {
+        const idx = Math.floor(Math.random() * availableAgents.length);
+        const agentName = this.availableAgents[idx];
+
+        clippy.load(agentName, function (agent) {
+          ag = agent;
+          agent.show();
+        });
+      }
+
+      function toggleButtonVisibility() {
+        const domBtnStart = document.getElementById("btn-start");
+        domBtnStart.style.display = "none";
+        const domBtnActions = document.getElementById("btn-actions");
+        domBtnActions.style.display = "block";
+      }
+
+      function randomAnimation() {
+        ag.animate();
+      }
+
+      function speak() {
+        const idx = Math.floor(Math.random() * talks.length);
+        talk = this.talks[idx];
+        ag.speak(talk);
+      }
+
+      function getNewAgent() {
+        ag.stop();
+        ag.hide();
+        delete ag;
+        loadAgent();
+      }
+    </script>
+  </body>
+</html>
