@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --win2k-gray: #c6c3c6;
+  --win2k-dark-gray: #848284;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.w2k- {
+  &winborder {
+    border-top: 1px solid var(--win2k-gray);
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid var(--win2k-gray);
+  }
+
+  &outset {
+    border-top: 1px solid white;
+    border-right: 1px solid var(--win2k-dark-gray);
+    border-bottom: 1px solid var(--win2k-dark-gray);
+    border-left: 1px solid white;
+  }
+
+  &inset {
+    border-top: 1px solid var(--win2k-dark-gray);
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid var(--win2k-dark-gray);
+  }
+
+  &window {
+    padding: 2px;
+    background: var(--win2k-gray);
+  }
+}

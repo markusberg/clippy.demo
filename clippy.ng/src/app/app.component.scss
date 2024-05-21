@@ -1,0 +1,14 @@
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.desktop {
+  flex-grow: 1;
+  background-color: #008284;
+  background-image: url(/assets/win2k-bg.png);
+  background-repeat: no-repeat;
+}
+

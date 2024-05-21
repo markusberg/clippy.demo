@@ -17,6 +17,9 @@
 	},
 	"keywords": ["clippy.modern", "clippy.js", "clippy"],
 	"dependencies": {
+		"clippy.modern": "^0.0.1"
+	},
+	"devDependencies": {
 		"@biomejs/biome": "^1.7.3",
 		"http-server": "^14.1.1",
 		"lefthook": "^1.6.12"

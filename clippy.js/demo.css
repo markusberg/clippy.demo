@@ -141,7 +141,7 @@ body {
 .taskbar {
   border-top: 1px solid white;
   background: var(--win2k-gray);
-  height: 24px;
+  height: 27px;
   display: flex;
   padding: 2px;
 }
