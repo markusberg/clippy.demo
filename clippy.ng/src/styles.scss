@@ -1,7 +1,6 @@
-:root {
-  --win2k-gray: #c6c3c6;
-  --win2k-dark-gray: #848284;
-}
+@use './sass/colors';
+@use './sass/icons';
+@use './sass/w2k';
 
 html {
   box-sizing: border-box;
@@ -19,30 +18,14 @@ body {
   height: 100vh;
 }
 
-.w2k- {
-  &winborder {
-    border-top: 1px solid var(--win2k-gray);
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid var(--win2k-gray);
-  }
+.mr-2 {
+  margin-right: 2px;
+}
 
-  &outset {
-    border-top: 1px solid white;
-    border-right: 1px solid var(--win2k-dark-gray);
-    border-bottom: 1px solid var(--win2k-dark-gray);
-    border-left: 1px solid white;
-  }
+.p-2 {
+  padding: 2px;
+}
 
-  &inset {
-    border-top: 1px solid var(--win2k-dark-gray);
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid var(--win2k-dark-gray);
-  }
-
-  &window {
-    padding: 2px;
-    background: var(--win2k-gray);
-  }
+.pl-1 {
+  padding-left: 1px;
 }

@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  min-width: 650px;
+  max-width: 900px;
+  margin-right: 80px;
+  transform: translate(80px, 27px);
+}
+
+.border {
+  border-top: 1px solid var(--w2k-light-gray);
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid var(--w2k-light-gray);
+}
+
+.titlebar {
+  height: 18px;
+  margin-bottom: 1px;
+  display: flex;
+
+  .title {
+    background-color: #000084;
+    background: linear-gradient(90deg, var(--w2k-dark-blue) 0%, var(--w2k-light-blue) 100%);
+    flex-grow: 1;
+  }
+
+  .controls {
+    background-color: var(--w2k-light-blue);
+    display: flex;
+  }
+}
+
+.window {
+  padding: 2px;
+  background: var(--w2k-light-gray);
+}

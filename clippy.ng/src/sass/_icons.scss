@@ -1,0 +1,26 @@
+i.wi {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url(/assets/w2k-icons.png) no-repeat;
+
+  &.wi-close {
+    background-position: 0px 0px;
+  }
+
+  &.wi-maximize {
+    background-position: -10px 0px;
+  }
+
+  &.wi-minimize {
+    background-position: -20px 0px;
+  }
+
+  &.wi-restore {
+    background-position: -30px 0px;
+  }
+
+  &.wi-question {
+    background-position: -40px 0px;
+  }
+}
